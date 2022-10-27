@@ -27,7 +27,7 @@
 
     .search-form {
         padding: 10px 15px;
-        min-width: 1100px;
+        min-width: 800px;
         border-radius: 20px;
 
         border: 1px solid transparent;
@@ -44,7 +44,7 @@
         }
 
         &__input-line {
-            min-width: 800px;
+            min-width: 600px;
             background: transparent;
             border: none;
             color: black;
@@ -89,11 +89,92 @@
 
         .pin-container {
             margin: 0 auto;
-            background: url("../assets/rastor/main/test-picture.jpg") no-repeat center center;
+            padding-bottom: 15px;
             max-height: 300px;
             max-width: 200px;
             width: 100%;
             height: 100%;
+
+            &__pin-content {
+                margin-bottom: 18px;
+                max-height: 255px;
+                max-width: 200px;
+                width: 100%;
+                height: 100%; 
+                border-radius: 20px;  
+                background: url(../assets/rastor/main/test-picture.jpg) no-repeat center center;
+                
+
+                .content-wrap {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 10px;
+                    visibility: hidden; 
+
+                    .content-wrap__pin-action {
+                        margin: 0 auto;
+                        padding: 4px 6px;
+                        background: rgba(255, 255, 255, 0.6);
+                        border: 1px solid black;
+                        color: black;
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+                        max-width: max-content;
+                        border-radius: 6px;
+                    }
+
+                    .content-wrap__pin-action:nth-child(2) {
+                        background: transparent;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .content-wrap__pin-action:last-child {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        gap: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .pin-container__pin-content:hover {
+                .content-wrap {
+                    visibility: visible;
+                    transition: 1.7s;
+
+                }
+            }
+            .pin-container__pin-content:not(hover) {
+                .content-wrap {
+                    visibility: hidden;
+                    transition: 1s;
+
+                }
+            }
+
+            .pin-info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+
+                &__avatar {
+                    padding-left: 8px;
+                    max-height: 32px;
+                    max-width: 32px;
+                    border-radius: 50%;
+                }
+
+                &__title {
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                }
+            }
+
         }
     }
 }
