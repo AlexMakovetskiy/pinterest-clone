@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/reset.scss">
+    <link rel="stylesheet" href="style/common.scss">
     <link rel="stylesheet" href="style/style.scss">
 </head>
-<body>
+<body onload="hideModal()">
     <header class="header section">
         <div class="logo-wrap">
             <img src="./assets/rastor/header/logo-pinterest.png" alt="pinterest logo" class="logo-wrap__logotype">
@@ -18,7 +19,7 @@
             <img src="./assets/vector/header/magnifier.svg" alt="magnifier" class="search-form__magnifier">
             <input type="text" class="search-form__input-line" placeholder="Поиск...">
         </div>
-        <button class="choose-border">Выбрать доску</button>
+        <button class="choose-border" id="choose-border">Выбрать доску</button>
     </header>
     <main class="pins-conteiner">
         <section class="pins-conteiner__vertical-pins">
@@ -246,5 +247,15 @@
             </div>
         </section>
     </main>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Выберите доску</h2>
+            <p>доска 1</p>
+            <p>доска 2</p>
+            <p>доска 3</p>
+        </div>
+    </div>
+    <script src="./JS/script.js"></script>
 </body>
 </html>
